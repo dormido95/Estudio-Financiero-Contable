@@ -283,7 +283,7 @@ body.landing {
 /* Ocultar "Ingresar" en dispositivos táctiles (tablet / celular) */
 @media (hover: none) {
   .side__bottom { display: none; }
-  .side__content { justify-content: center; gap: 2.5rem; }
+  .side__content { justify-content: center; gap: 1.0rem; }
   /* Brinatti queda último en el flujo de mobile: le damos aire abajo
      para que la frase no quede pegada a la barra del navegador */
   .side--brinatti .side__content {
@@ -1095,7 +1095,7 @@ body.theme-brinatti > * { position: relative; z-index: 1; }
  
 @media (max-width: 640px) {
   .footer__top { flex-direction: column; align-items: flex-start; }
-  .footer__cross { font-size: 0.9rem; }
+  .footer__cross { font-size: 1rem; }
 }
  
 /* ---------- SELECTION ---------- */
