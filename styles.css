@@ -1075,6 +1075,10 @@ body.theme-brinatti > * { position: relative; z-index: 1; }
   .footer__top { flex-direction: column; align-items: flex-start; }
   .footer__cross { font-size: 0.9rem; }
 }
+@media (hover: none) {
+  .side__bottom { display: none; }
+  .side__content { justify-content: center; gap: 2.5rem; }
+}
  
 /* ---------- SELECTION ---------- */
 ::selection { background: var(--accent); color: var(--bg); }
