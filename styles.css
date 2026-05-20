@@ -284,6 +284,11 @@ body.landing {
 @media (hover: none) {
   .side__bottom { display: none; }
   .side__content { justify-content: center; gap: 2.5rem; }
+  /* Brinatti queda último en el flujo de mobile: le damos aire abajo
+     para que la frase no quede pegada a la barra del navegador */
+  .side--brinatti .side__content {
+    padding-bottom: clamp(5rem, 14vh, 8rem);
+  }
 }
  
 /* =========================================================
