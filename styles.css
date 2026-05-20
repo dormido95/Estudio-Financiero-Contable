@@ -1077,7 +1077,7 @@ body.theme-brinatti > * { position: relative; z-index: 1; }
 }
 @media (hover: none) {
   .side__bottom { display: none; }
-  .side__content { justify-content: center; gap: 2.0rem; }
+  .side__content { justify-content: center; gap: 1rem; }
 }
  
 /* ---------- SELECTION ---------- */
