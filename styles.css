@@ -251,22 +251,39 @@ body.landing {
 @keyframes fadeDown { to { opacity: 0.7; transform: translateY(0); } }
  
 @media (max-width: 768px) {
-  .split { flex-direction: column; }
-  .side { min-height: 50vh; }
-  .split:hover .side { flex: 1; }
-  .split:hover .side:hover { flex: 1.2; }
-  .divider {
-    top: 50%; left: 0; right: 0;
-    bottom: auto; width: 100%; height: 1px;
-    transform: translateY(-50%);
-    flex-direction: row;
+  body.landing {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
-  .divider__line { flex: 1; width: auto; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(245,239,230,0.35), transparent);
+  .split {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
-  .divider__dot { margin: 0 1rem; }
-  .landing__footer { font-size: 0.6rem; padding: 0.7rem 1rem; }
+  .side {
+    flex: none;
+    width: 100%;
+    min-height: 50vh;
+    min-height: 50dvh;
+  }
+  .divider { display: none; }
+  .landing__footer {
+    position: static;
+    font-size: 0.6rem;
+    padding: 1.5rem 1rem;
+  }
   .landing__footer-mid { display: none; }
+}
+ 
+/* Ocultar "Ingresar" en dispositivos táctiles (tablet / celular) */
+@media (hover: none) {
+  .side__bottom { display: none; }
+  .side__content { justify-content: center; gap: 2.5rem; }
 }
  
 /* =========================================================
@@ -1075,11 +1092,6 @@ body.theme-brinatti > * { position: relative; z-index: 1; }
   .footer__top { flex-direction: column; align-items: flex-start; }
   .footer__cross { font-size: 0.9rem; }
 }
-@media (hover: none) {
-  .side__bottom { display: none; }
-  .side__content { justify-content: center; gap: 0.5rem; }
-}
  
 /* ---------- SELECTION ---------- */
 ::selection { background: var(--accent); color: var(--bg); }
- 
